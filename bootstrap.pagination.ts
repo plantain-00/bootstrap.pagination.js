@@ -4,12 +4,12 @@
 /**
  * Created by yaoyao on 15/2/10.
  */
-function getSkipped(page, itemsPerPage) {
-    return (page - 1) * itemsPerPage;
+
+function getSkipped(page:number, itemsPerPage:number) {
+    return (page - 1) * itemsPerPage
 }
-function getPagination(totalItems, page, pagesPerGroup, itemsPerPage) {
-    if (pagesPerGroup === void 0) { pagesPerGroup = 10; }
-    if (itemsPerPage === void 0) { itemsPerPage = 20; }
+
+function getPagination(totalItems:number, page:number, pagesPerGroup:number = 10, itemsPerPage:number = 20) {
     var pageIndex = page - Math.floor((page - 1) / pagesPerGroup) * pagesPerGroup;
     var group = Math.floor((page - 1) / pagesPerGroup) + 1;
     var totalGroups;
@@ -50,12 +50,12 @@ function getPagination(totalItems, page, pagesPerGroup, itemsPerPage) {
     }
     return pagination;
 }
-var paginator = (function () {
-    function paginator() {
-        this.getSkipped = getSkipped;
-        this.getPagination = getPagination;
-    }
-    return paginator;
-})();
+
+class paginator {
+    getSkipped = getSkipped;
+    getPagination = getPagination;
+}
+
+declare var module:any;
+
 module.exports = new paginator();
-//# sourceMappingURL=bootstrap.pagination.js.map

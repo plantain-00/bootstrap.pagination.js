@@ -1,6 +1,6 @@
 {
   "name": "bootstrap.pagination.js",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "a bootstrap pagination for node.js",
   "repository": "https://github.com/plantain-00/bootstrap.pagination.js"
 }
